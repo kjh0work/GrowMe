@@ -1,0 +1,41 @@
+name: Refactor
+description: 리팩토링 이슈
+title: "[Refactor] "
+labels: ["refactor"]
+body:
+  - type: textarea
+    id: reason
+    attributes:
+      label: 리팩토링 이유
+      description: 왜 리팩토링이 필요한지 작성해주세요.
+      placeholder: 예) DailyRecord 관련 로직이 ViewModel에 과도하게 몰려 있습니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 변경 범위
+      description: 어떤 파일/레이어를 수정하는지 작성해주세요.
+      placeholder: 예) ViewModel, UseCase, Repository 계층 분리
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 작업 내용
+      value: |
+        - [ ] 책임 분리
+        - [ ] 중복 코드 제거
+        - [ ] 네이밍 개선
+        - [ ] 테스트 확인
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_effect
+    attributes:
+      label: 기대 효과
+      description: 리팩토링 후 어떤 점이 좋아지는지 작성해주세요.
+      placeholder: 예) 유지보수성 향상, 테스트 용이성 증가
